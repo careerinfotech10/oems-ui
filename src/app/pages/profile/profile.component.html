@@ -1,0 +1,45 @@
+<mat-card>
+    <h2>Your Profile Details</h2>
+    <!-- {{user | json}} -->
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+                        class="profile-img" alt="">
+                        <h1 class="mt-20">{{user.firstname}} {{user.lastname}}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <table class="table text-center">
+                            <tr>
+                                <td>User Name</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>User ID</td>
+                                <td>Exam {{user.id}}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone No:</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>User Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>User Status</td>
+                                <td>{{user.enabled}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-center">
+        <button mat-raised-button color="primary">Update</button>
+        <button mat-raised-button color="accent">SHARE</button>
+      </mat-card-actions>
+</mat-card>

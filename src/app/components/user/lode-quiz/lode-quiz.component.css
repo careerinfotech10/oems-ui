@@ -1,0 +1,25 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('../../../../assets/img/test.png');
+    background-size: cover;
+  }
+
+  .ml-5{
+      margin-left: 2px;
+  }
+.truncate{
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mt-20{
+  margin-top: 20px;
+}
+mat-card{
+    margin: 10px 5px !important;
+}

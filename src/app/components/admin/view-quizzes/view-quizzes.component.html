@@ -1,0 +1,27 @@
+<h1>view quizzes</h1>
+<mat-card class="mt-20" *ngFor="let item of quizzes">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>
+        {{item.title}}
+    </mat-card-title>
+    <mat-card-subtitle>
+        {{item.category.title}} 
+    </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        {{item.description}}
+    </mat-card-content>
+    <div>
+        <button [routerLink]="['/admin/view-questions/'+item.quiz_id+'/'+item.title]" mat-flat-button color="primary">Questions</button>
+        <button mat-stroked-button color="primary" class="ml-20">Max Marks : {{item.maxMarks}}</button>
+        <button mat-stroked-button color="primary" class="ml-20">Number Of Questions : {{item.numberOfQuestions}}</button>
+        <button [routerLink]="['/admin/quiz/'+item.quiz_id]"  mat-flat-button color="primary" class="ml-20">Update</button>
+        <button mat-flat-button color="primary" class="ml-20">Attempts</button>
+        <button mat-flat-button color="warn" class="ml-20" (click)="deleteQuiz(item.quiz_id)">Delete</button>
+    </div>
+</mat-card>
+
+<div class="container text-center mt-20">
+    <button [routerLink]="['/admin/addquizzes']" type="submit" mat-raised-button color="primary">Add Quiz</button>
+</div>

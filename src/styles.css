@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; background-color: #b3e5fc; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.text-center{
+    text-align: center;
+}
+
+.ml-20{
+    margin-left: 20px;
+}
+.mr-20{
+    margin-right: 20px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.mb-20{margin-bottom: 20px;}

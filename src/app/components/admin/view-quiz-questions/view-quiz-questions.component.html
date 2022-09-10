@@ -1,0 +1,44 @@
+<h1 class="mt-20">Question Of {{quiz_title}}</h1>
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container text-center">
+                    <button routerLink="/admin/add-questions/{{quiz_id}}/{{quiz_title}}" mat-raised-button
+                        color="primary">Add Questions</button>
+                </div>
+                <mat-card *ngFor="let item of questions; let i = index" class="mt-20">
+                    <mat-card-content>
+                        <p><b>Q{{i+1}}) </b> <span [innerHTML]="item.content"></span></p>
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><b>A)</b> <span> {{item.option1}}</span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><b>B)</b> <span> {{item.option2}}</span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><b>C)</b> <span> {{item.option3}}</span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><b>D)</b> <span> {{item.option4}}</span></p>
+                                </div>
+                            </div>
+                            <mat-divider></mat-divider>
+                            <p><b>Carect Answer Is:- </b> {{item.answer}}</p>
+                        </div>
+                    </mat-card-content>
+                    <div>
+
+                        <button mat-flat-button color="warn" (click)="deleteQuestion(item.question_id)">Delete</button>
+                        <button routerLink="/admin/updatequestion/{{item.question_id}}/{{quiz_title}}" mat-flat-button color="primary" class="ml-20">Update</button>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
